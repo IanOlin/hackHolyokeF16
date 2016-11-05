@@ -1,6 +1,9 @@
 package olin.eightbyte;
 
 import io.dropwizard.Application;
+import io.dropwizard.assets.AssetsBundle;
+import io.dropwizard.configuration.EnvironmentVariableSubstitutor;
+import io.dropwizard.configuration.SubstitutingSourceProvider;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 
@@ -17,12 +20,11 @@ public class EightbyteApplication extends Application<EightbyteConfiguration> {
 
 	@Override
 	public void initialize(final Bootstrap<EightbyteConfiguration> bootstrap) {
-		// TODO: application initialization
+		bootstrap.addBundle(new AssetsBundle("/assets/", "/", "index.html"));
 	}
 
 	@Override
 	public void run(final EightbyteConfiguration configuration, final Environment environment) {
-		// TODO: implement application
 	}
 
 }
