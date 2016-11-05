@@ -1,5 +1,5 @@
 /target/
-
 config.yml
+reset.sql
 .project
 .classpath
