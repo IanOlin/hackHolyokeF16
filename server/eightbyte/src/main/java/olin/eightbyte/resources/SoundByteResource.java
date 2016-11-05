@@ -1,8 +1,11 @@
+
 package olin.eightbyte.resources;
 
+import java.io.BufferedReader;
 import java.io.File;
 
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -84,4 +87,25 @@ public class SoundByteResource {
 	    out.flush();
 	    out.close();
 	}
+	
+	public static final String getUniqueURL() {
+		String[] words = new String[1000];
+		try {
+			final BufferedReader in = new BufferedReader(
+					new FileReader("src/main/resources/english.txt"));
+			for (int i = 0; i < words.length; i ++)
+				words[i] = in.readLine();
+		} catch (IOException e) {
+			return "ioexception";
+		}
+		
+		String uri;
+		do {
+			uri = "";
+			for (int i = 0; i < 3; i ++)
+				uri += words[(int) (Math.random()*words.length)];
+		} while (false);	//TODO: make sure this URI doesn't actually exist
+		return uri;
+	}
 }
+
