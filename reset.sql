@@ -1,14 +1,14 @@
-\c eightbyte sam;
+\c eightbyte m;
 
 DROP SCHEMA IF EXISTS test CASCADE;
 
-CREATE SCHEMA test AUTHORIZATION sam;
+CREATE SCHEMA test AUTHORIZATION m;
 
 SET search_path TO test;
 
-CREATE TABLE soundbite
+CREATE TABLE soundbyte
 (
-	id serial NOT NULL,
-	data bytea,
+	id serial PRIMARY KEY,
+	uri text,
 	ext text
 );
