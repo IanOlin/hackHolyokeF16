@@ -16,6 +16,7 @@ class File extends React.Component {
 	constructor() {
 		super();
 		this.state = {
+			playlist: [],
 			uri: "",
 			ext: ""
 		}
@@ -24,22 +25,20 @@ class File extends React.Component {
 	componentDidMount() {
 		fetch('/api/soundbytes/' + this.props.params.fileId).then((response) => {
 			response.json().then((json) => {
-				this.setState(json);
+				this.setState({
+					url: json.uri + '.ogg',
+					displayText: json.ext
+				});
 			});
 		});
 
 	}
 
 	render() {
-		let soundbite = '/api'+this.state.uri+'.ogg'
-		let text = 'This will be useful'
-
-		var playlist =
-		[{ url: soundbite, displayText: text }];
 		return (
 			<div>
-			<AudioPlayer playlist={playlist} autoplay={true} />
-			{this.state.uri}
+			<AudioPlayer playlist={[this.state]} autoplay={true}
+			autoplayDelayInSeconds={.5}/>
 			</div>
 			);
 	}
