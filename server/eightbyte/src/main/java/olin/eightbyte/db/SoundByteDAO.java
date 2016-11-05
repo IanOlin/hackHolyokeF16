@@ -24,7 +24,6 @@ public interface SoundByteDAO {
 			+ "(id, uri, ext) "
 			+ "VALUES "
 			+ "(:id, :uri, :ext)")
-	
 	void addSoundByte(@BindBean SoundByte soundByte);
 	
 }

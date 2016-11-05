@@ -1,5 +1,8 @@
 package olin.eightbyte.resources;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.List;
 
 import javax.validation.Valid;
@@ -40,5 +43,26 @@ public class SoundByteResource {
 	@Path("/submit")
 	public void add(@Valid SoundByte soundByte) {
 		dao.addSoundByte(soundByte);
+	}
+	
+	
+	public static final String getUniqueURL() {
+		String[] words = new String[1000];
+		try {
+			final BufferedReader in = new BufferedReader(
+					new FileReader("src/main/resources/english.txt"));
+			for (int i = 0; i < words.length; i ++)
+				words[i] = in.readLine();
+		} catch (IOException e) {
+			return "ioexception";
+		}
+		
+		String uri;
+		do {
+			uri = "";
+			for (int i = 0; i < 3; i ++)
+				uri += words[(int) (Math.random()*words.length)];
+		} while (false);	//TODO: make sure this URI doesn't actually exist
+		return uri;
 	}
 }
