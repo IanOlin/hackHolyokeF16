@@ -20,7 +20,7 @@ public class EightbyteApplication extends Application<EightbyteConfiguration> {
 
 	@Override
 	public void initialize(final Bootstrap<EightbyteConfiguration> bootstrap) {
-		bootstrap.addBundle(new AssetsBundle("/assets/", "/", "index.html"));
+		bootstrap.addBundle(new AssetsBundle("/assets/", "/raw/"));
 	}
 
 	@Override
