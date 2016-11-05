@@ -4,7 +4,7 @@ import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 
-public class EightbyteApplication extends Application<eightbyteConfiguration> {
+public class EightbyteApplication extends Application<EightbyteConfiguration> {
 
 	public static void main(final String[] args) throws Exception {
 		new EightbyteApplication().run(args);
@@ -16,12 +16,12 @@ public class EightbyteApplication extends Application<eightbyteConfiguration> {
 	}
 
 	@Override
-	public void initialize(final Bootstrap<eightbyteConfiguration> bootstrap) {
+	public void initialize(final Bootstrap<EightbyteConfiguration> bootstrap) {
 		// TODO: application initialization
 	}
 
 	@Override
-	public void run(final eightbyteConfiguration configuration, final Environment environment) {
+	public void run(final EightbyteConfiguration configuration, final Environment environment) {
 		// TODO: implement application
 	}
 
