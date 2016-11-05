@@ -39,6 +39,10 @@ public class SoundByteResource {
 		this.dao = dao;
 	}
 	
+	public SoundByteResource(){
+		//empty constructor :/
+	}
+	
 	@GET
 	public List<SoundByte> getAllSoundBytes() {
 		return dao.getAll();
@@ -67,8 +71,13 @@ public class SoundByteResource {
 	    // save it
 	    writeToFile(uploadedInputStream, uploadedFileLocation);
 	    String output = "File uploaded to : " + uploadedFileLocation;
-    return Response.ok(output).build();
-	}
+	    
+	    //write to database
+	    
+	    SoundByte soundByte = new SoundByte((long) 0, fileDetail.getFileName());
+	    dao.addSoundByte(soundByte);
+	    return Response.ok(output).build();
+		}
 	
 //	    @POST
 //	    public void uploadFile(){
