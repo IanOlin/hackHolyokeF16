@@ -1,8 +1,5 @@
 package olin.eightbyte;
 
-import java.io.FileReader;
-import java.io.IOException;
-
 import org.skife.jdbi.v2.DBI;
 
 import io.dropwizard.Application;
@@ -15,9 +12,6 @@ import olin.eightbyte.resources.SoundByteResource;
 
 public class EightbyteApplication extends Application<EightbyteConfiguration> {
 
-	private String[] words;
-	
-	
 	public static void main(final String[] args) throws Exception {
 		new EightbyteApplication().run(args);
 	}
@@ -29,7 +23,7 @@ public class EightbyteApplication extends Application<EightbyteConfiguration> {
 
 	@Override
 	public void initialize(final Bootstrap<EightbyteConfiguration> bootstrap) {
-		bootstrap.addBundle(new AssetsBundle("/sound/", "/raw/"));
+		bootstrap.addBundle(new AssetsBundle("/assets/", "/raw/"));
 	}
 
 	@Override
