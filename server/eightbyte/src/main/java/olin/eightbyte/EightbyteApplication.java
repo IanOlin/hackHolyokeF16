@@ -20,7 +20,7 @@ public class EightbyteApplication extends Application<EightbyteConfiguration> {
 
 	@Override
 	public void initialize(final Bootstrap<EightbyteConfiguration> bootstrap) {
-		// TODO: application initialization
+		
 	}
 
 	@Override

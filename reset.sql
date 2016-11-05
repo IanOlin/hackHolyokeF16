@@ -8,7 +8,7 @@ SET search_path TO test;
 
 CREATE TABLE soundbyte
 (
-	id serial NOT NULL,
-	data bytea,
+	id serial PRIMARY KEY,
+	uri text,
 	ext text
 );
