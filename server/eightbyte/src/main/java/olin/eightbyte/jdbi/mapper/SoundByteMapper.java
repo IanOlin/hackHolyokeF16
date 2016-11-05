@@ -12,10 +12,10 @@ public class SoundByteMapper implements ResultSetMapper<SoundByte> {
 
 	@Override
 	public SoundByte map(int index, ResultSet r, StatementContext ctx) throws SQLException {
-		final byte[] literallyJustARandomByteArr = {17, 42, 5};
-		return new SoundByte(new Long(42),
-							"xxxxxxxxxxxxxxxx",
-							literallyJustARandomByteArr);
+		return new SoundByte(
+				r.getLong("id"),
+				r.getString("ext"),
+				r.getBytes("data"));
 	}
 
 }
