@@ -46,7 +46,7 @@ public class SoundByteResource {
 	}
 	
 	
-	public static final String getUniqueURI() {
+	public static final String getUniqueURL() {
 		String[] words = new String[1000];
 		try {
 			final BufferedReader in = new BufferedReader(
