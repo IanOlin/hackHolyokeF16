@@ -7,21 +7,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SoundByte {
 
 	@JsonProperty
-	private Long id;
+	private Long id;	// serializable identifier
 	
 	@JsonProperty
-	private String ext;
+	private String ext;	// URL extension for indexing
 	
 	@NotNull
 	@JsonProperty
-	private byte[] data;
+	private String uri;	// filename for referencing actual data
 	
 	
 	
-	public SoundByte(Long newId, String uri, byte[] sound) {
+	public SoundByte(Long newId, String newExt, String newUri) {
 		id = newId;
-		ext = uri;
-		data = sound;
+		ext = newExt;
+		uri = newUri;
 	}
 	
 	
@@ -41,18 +41,18 @@ public class SoundByte {
 	}
 	
 	
-	public void setExt(String uri) {
-		ext = uri;
+	public void setExt(String newExt) {
+		ext = newExt;
 	}
 	
 	
-	public byte[] getData() {
-		return data;
+	public String getUri() {
+		return uri;
 	}
 	
 	
-	public void setData(byte[] sound) {
-		data = sound;
+	public void setData(String newUri) {
+		uri = newUri;
 	}
 
 }
