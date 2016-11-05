@@ -4,10 +4,10 @@ import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 
-public class eightbyteApplication extends Application<eightbyteConfiguration> {
+public class EightbyteApplication extends Application<eightbyteConfiguration> {
 
     public static void main(final String[] args) throws Exception {
-        new eightbyteApplication().run(args);
+        new EightbyteApplication().run(args);
     }
 
     @Override
