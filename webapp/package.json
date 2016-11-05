@@ -1,7 +1,7 @@
 {
-  "name": "webapp",
+  "name": "eightbyte",
   "version": "1.0.0",
-  "description": "Consamables javascript app",
+  "description": "A soundclip sharing javascript app.",
   "main": "index.js",
   "scripts": {
     "dev": "webpack -d --watch",
