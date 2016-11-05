@@ -1,6 +1,6 @@
 \c eightbyte sam;
 
-DROP SCHEMA test CASCADE;
+DROP SCHEMA IF EXISTS test CASCADE;
 
 CREATE SCHEMA test AUTHORIZATION sam;
 
@@ -10,5 +10,5 @@ CREATE TABLE soundbite
 (
 	id serial NOT NULL,
 	data bytea,
-	ext text,
+	ext text
 );

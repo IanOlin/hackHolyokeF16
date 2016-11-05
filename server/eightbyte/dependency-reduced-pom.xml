@@ -116,7 +116,7 @@
   </dependencyManagement>
   <properties>
     <dropwizard.version>1.0.3</dropwizard.version>
-    <mainClass>olin.eightbyte.eightbyteApplication</mainClass>
+    <mainClass>olin.eightbyte.EightbyteApplication</mainClass>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
