@@ -15,7 +15,7 @@ public class SoundByteMapper implements ResultSetMapper<SoundByte> {
 		return new SoundByte(
 				r.getLong("id"),
 				r.getString("ext"),
-				r.getBytes("data"));
+				r.getString("uri"));
 	}
 
 }
