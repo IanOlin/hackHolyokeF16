@@ -36,8 +36,6 @@ public class EightbyteApplication extends Application<EightbyteConfiguration> {
 			final String[] sa = {"floccinaucinihilipilification"};
 			words = sa;
 		}
-		for (int i = 0; i >= 0; i ++)
-			System.out.println(getUniqueURI());
 		
 		bootstrap.addBundle(new AssetsBundle("/sound/", "/raw/"));
 	}
