@@ -1,6 +1,6 @@
 .navbar {
 	margin-bottom: 1em;
-	border-bottom: 4px solid blue;
+	border-bottom: 4px solid black;
 	// background-color: 
 }
 
@@ -14,6 +14,7 @@
 	margin: 1em;
 	margin-left: 3em;
 	margin-right: 3em;
+	box-shadow: 1px 1px 3px gray;
 }
 
 .search-field {
@@ -22,8 +23,19 @@
 }
 
 .import-button {
+	color: black;
+	font-weight: bold;
 	@include navbar-element;
 	float: right;
+	border: 2px solid grey;
+	border-radius: 3px;
+	padding: 2px;
+	background-color: #f0f0f0;
+}
+
+.import-button:hover {
+	text-shadow: 0.5px 0.5px 0.5px grey;
+	cursor: pointer;
 }
 
 .input[type=text] {

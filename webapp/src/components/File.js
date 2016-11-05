@@ -2,16 +2,6 @@ import React from 'react';
 import AudioPlayer from  'react-responsive-audio-player';
 import { Router, Route, Link } from 'react-router'
 
-class App extends React.Component {
-	render() {
-		return (
-			<div>
-			<AudioPlayer playlist={playlist} autoplay={true} />
-			</div>
-			);
-	}
-}
-
 class File extends React.Component {
 	constructor() {
 		super();
@@ -44,4 +34,4 @@ class File extends React.Component {
 	}
 }
 
-export { App, File };
+export { File };
