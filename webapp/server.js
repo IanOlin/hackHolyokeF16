@@ -7,7 +7,8 @@ new WebpackDevServer(webpack(config), {
 	hot: true,
 	historyApiFallback: true,
 	proxy: {
-		'/api/*': 'http://localhost:8081'
+		'/api/*': 'http://localhost:8081',
+		'/raw/*': 'http://localhost:8081'
 	}
 }).listen(9090, '0.0.0.0', function(err, result) {
 	if (err) {

@@ -1,4 +1,6 @@
 import React from 'react';
+import AudioPlayer from  'react-responsive-audio-player';
+import { Router, Route, Link } from 'react-router'
 
 import NavBar from './NavBar';
 import SoundBytesContainer from './SoundBytesContainer';
@@ -23,6 +25,6 @@ export default class App extends React.Component {
 				<NavBar/>
 				<SoundBytesContainer soundbytes={this.state.soundbytes}></SoundBytesContainer>
 			</div>
-		);
+			);
 	}
 }
