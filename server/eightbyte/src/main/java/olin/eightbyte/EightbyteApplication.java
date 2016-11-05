@@ -1,8 +1,13 @@
 package olin.eightbyte;
 
+import org.skife.jdbi.v2.DBI;
+
 import io.dropwizard.Application;
+import io.dropwizard.jdbi.DBIFactory;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
+import olin.eightbyte.db.SoundByteDAO;
+import olin.eightbyte.resources.SoundByteResource;
 
 public class EightbyteApplication extends Application<EightbyteConfiguration> {
 
@@ -22,7 +27,11 @@ public class EightbyteApplication extends Application<EightbyteConfiguration> {
 
 	@Override
 	public void run(final EightbyteConfiguration configuration, final Environment environment) {
-		// TODO: implement application
+		final DBIFactory factory = new DBIFactory();
+        final DBI jdbi = factory.build(environment, configuration.getDataSourceFactory(), "postgresql");
+        final SoundByteDAO soundByteDAO = jdbi.onDemand(SoundByteDAO.class);
+
+        environment.jersey().register(new SoundByteResource(soundByteDAO));
 	}
 
 }
