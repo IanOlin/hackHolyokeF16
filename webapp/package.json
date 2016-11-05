@@ -34,7 +34,10 @@
     "url": "https://github.com/smyers/consamables.git"
   },
   "devDependencies": {
+    "node-sass": "^3.11.1",
     "react-hot-loader": "^1.3.0",
+    "sass-loader": "^4.0.2",
+    "webpack": "^1.13.3",
     "webpack-dev-server": "^1.14.1"
   }
 }

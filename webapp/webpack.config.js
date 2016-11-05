@@ -5,6 +5,10 @@ var autoprefixer = require('autoprefixer');
 var BUILD_DIR = path.resolve(__dirname, './build');
 var APP_DIR = path.resolve(__dirname, './src');
 
+if (global.Promise == null) {
+    global.Promise = require('es6-promise');
+}
+
 var config = {
     devtool: 'eval',
     entry: [
