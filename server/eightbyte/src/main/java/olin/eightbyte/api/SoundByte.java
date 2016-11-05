@@ -4,6 +4,8 @@ import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import olin.eightbyte.resources.SoundByteResource;
+
 public class SoundByte {
 
 	@JsonProperty
@@ -18,10 +20,10 @@ public class SoundByte {
 	
 	
 	
-	public SoundByte(Long newId, String newExt, String newUri) {
+	public SoundByte(Long newId, String newExt) {
 		id = newId;
 		ext = newExt;
-		uri = newUri;
+		uri = SoundByteResource.getUniqueURI();
 	}
 	
 	
