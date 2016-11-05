@@ -6,7 +6,7 @@ CREATE SCHEMA test AUTHORIZATION sam;
 
 SET search_path TO test;
 
-CREATE TABLE soundbite
+CREATE TABLE soundbyte
 (
 	id serial NOT NULL,
 	data bytea,
