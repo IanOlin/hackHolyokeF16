@@ -1,10 +1,11 @@
 import React from 'react';
 
-import NavBar from 'NavBar';
-import SoundBytesContainer from 'SoundBytesContainer';
+import NavBar from './NavBar';
+import SoundBytesContainer from './SoundBytesContainer';
 
 export default class App extends React.Component {
 	constructor() {
+		super();
 		this.state = { soundbytes: [] }
 	}
 

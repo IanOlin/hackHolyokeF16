@@ -3,7 +3,7 @@ import React from 'react';
 export default class SoundByteBox extends React.Component {
 	render() {
 		return (
-			<div>
+			<div className="soundbyte-box">
 				{this.props.id}
 				{this.props.ext}
 			</div>

@@ -1,8 +1,8 @@
-\c eightbyte sam;
+\c eightbyte m;
 
 DROP SCHEMA IF EXISTS test CASCADE;
 
-CREATE SCHEMA test AUTHORIZATION sam;
+CREATE SCHEMA test AUTHORIZATION m;
 
 SET search_path TO test;
 
