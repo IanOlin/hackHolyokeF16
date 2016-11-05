@@ -2,17 +2,28 @@ import React from 'react';
 import AudioPlayer from  'react-responsive-audio-player';
 import { Router, Route, Link } from 'react-router'
 
-let soundbite = 'test/audiotest.ogg'
-let text = 'This will be useful'
-
-var playlist =
-[{ url: soundbite, displayText: text }];
+import NavBar from './NavBar';
+import SoundBytesContainer from './SoundBytesContainer';
 
 export default class App extends React.Component {
+	constructor() {
+		super();
+		this.state = { soundbytes: [] }
+	}
+
+	componentDidMount() {
+		fetch('/api/soundbytes').then((response) => {
+			response.json().then((json) => {
+				this.setState({soundbytes: json})
+			});
+		});
+	}
+
 	render() {
 		return (
 			<div>
-			<AudioPlayer playlist={playlist} autoplay={true} />
+				<NavBar/>
+				<SoundBytesContainer soundbytes={this.state.soundbytes}></SoundBytesContainer>
 			</div>
 			);
 	}

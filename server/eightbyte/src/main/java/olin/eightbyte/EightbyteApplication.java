@@ -57,8 +57,10 @@ public class EightbyteApplication extends Application<EightbyteConfiguration> {
 
 		final DBIFactory factory = new DBIFactory();
 		final DBI jdbi = factory.build(environment, configuration.getDataSourceFactory(), "postgresql");
+
 		final SoundByteDAO soundByteDAO = jdbi.onDemand(SoundByteDAO.class);
 		
+		environment.jersey().register(new SoundByteResource(soundByteDAO));
 	}
 	
 	private void configureCors(Environment environment) {

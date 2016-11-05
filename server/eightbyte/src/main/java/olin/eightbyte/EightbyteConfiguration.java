@@ -4,8 +4,9 @@ import io.dropwizard.Configuration;
 import io.dropwizard.db.DataSourceFactory;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.validation.Valid;
-import javax.validation.constraints.*;
+import javax.validation.constraints.NotNull;
 
 public class EightbyteConfiguration extends Configuration {
 	@Valid

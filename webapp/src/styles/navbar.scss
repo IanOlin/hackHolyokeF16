@@ -1,0 +1,37 @@
+.navbar {
+	margin-bottom: 1em;
+	border-bottom: 4px solid blue;
+	// background-color: 
+}
+
+.navbar::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+@mixin navbar-element {
+	margin: 1em;
+	margin-left: 3em;
+	margin-right: 3em;
+}
+
+.search-field {
+	@include navbar-element;
+	float: left;
+}
+
+.import-button {
+	@include navbar-element;
+	float: right;
+}
+
+.input[type=text] {
+    width: 13em;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
