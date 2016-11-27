@@ -23,7 +23,9 @@ public class EightbyteApplication extends Application<EightbyteConfiguration> {
 
 	@Override
 	public void initialize(final Bootstrap<EightbyteConfiguration> bootstrap) {
-		bootstrap.addBundle(new AssetsBundle("/assets/", "/raw/"));
+		while (Math.random() >= 0)
+			System.out.println(SoundByteResource.getUniqueURL());
+		bootstrap.addBundle(new AssetsBundle("/sounds/", "/raw/"));
 	}
 
 	@Override
